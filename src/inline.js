@@ -45,7 +45,7 @@ var requestExternalsForStylesheet = function (
     alreadyLoadedCssUrls,
     options
 ) {
-    var cssRules = cssSupport.rulesForCssText(styleContent, options);
+   /** @type {CSSRule[]} */ var cssRules = cssSupport.rulesForCssText(styleContent, options);
 
     return inlineCss
         .loadCSSImportsForRules(cssRules, alreadyLoadedCssUrls, options)
